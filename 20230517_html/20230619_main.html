@@ -4,12 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main page</title>
+    <style>
+
+            <link rel =stylesheet href="/20230517_html/resources/css/daybutton.css">
+
+            /*<!-- 주석 아님 --> style태그 내부는 style 문법에 따라 html문법이 아님. 주석 마크도 달라짐.*/
+            button{
+                background-color: rgb(255, 202, 202);
+            }
+            [type =button]
+            {
+                background-color: blueviolet;
+            }
+            /* *{background-color: darkgray;} */
+            #id_1{
+                background-color: antiquewhite;
+                border :3px solid brown;
+            }
+            .c_red{
+                color: red;
+            }
+            [class^=s] {
+                color: blue;
+            }
+
+            div < form{
+                background-color: aqua;
+            }
+            [data-abc],[select],[:checked]{
+                color: blue;
+            }
+
+    </style>
 </head>
 <body>
     <header>
+        <div class="wrap">
+            <input type="checkbox" class="sr-only" id="check">
+            <label for="check">
+                <div class="button">
+                    <h3>HOME</h3>
+                    <div class="inside"></div>
+                </div>
+            </label>
+        </div>
+        <div ><p style="color: blueviolet; background-color: aqua;">f로렘입숨입숭로렘입숨입숭로렘입숨입숭</div>
+        <div class="s_aow">f로렘입숨입숭로렘입숨입숭dfdfd입숭</div>
+        <div class="s_yfw">f로렘입숨입숭df입숨입숭</div>
+        <div class="c_yellow">f로렘입숨입숭로렘입숨입숭로렘입숨입숭</div>
+        <button type="button">얍얍</button>
         <div>
             <img src="./resources/images/7.jpg" width="100" >
         </div>
+        <input type="range" value="10" id="id_3">
+        <select size = "1" id="size"> 구분
+            <option value="xs"> XS</option>
+            <option value="S"> S</option>
+            <option value="M"> M</option>
+            <option value="L"> L</option>
+        </select>
+        <select size = "1" id="size"> 구분
+            <optgroup label="옷가게">
+            <option value="xs"> XS</option>
+            <option value="S"> S</option>
+            <option value="M"> M</option>
+            <option value="L"> L</option>
+        </optgroup>
+    </select>
+        <input type="text" id="GGG" list="datalist id 값">
+        <datalist id="gg">
+            <optgroup label="옷가게">
+            <option value="xs" label="xs"> XS</option>
+            <option value="S" label="s"> S</option>
+            <option value="M" label="m"> M</option>
+            <option value="L" label="l"> L</option>
+        </datalist>
+        <div id="id_1" class="c_red">
         <div><form action="./20230619_search_do.html"method="get">
             <input type="color" name="mycolor"> <!--mycolor=%23000000-->
             <input type="date" name="mydate"> <!--mydate=2023-06-13-->
@@ -38,6 +108,7 @@
 
         </intput>
         </div>
+        </div>
     </header>
     <div id="wrap_content">
         <section>
@@ -57,7 +128,7 @@
                         <tr>
                             <th><label > ID </label></th>
                             <td><input type="text" name = "id" size = "5" maxlength="10"></td>
-                            <td rowspan="2"> <button type="submit"> 로그인</button></td>
+                            <td rowspan="2"> <button type="submit"> 로그인</button></td>...
                         </tr>
                         <tr>
                             <th><label > Password </label></th>
