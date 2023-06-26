@@ -9,141 +9,132 @@
             <link rel =stylesheet href="/20230517_html/resources/css/daybutton.css">
 
             /*<!-- 주석 아님 --> style태그 내부는 style 문법에 따라 html문법이 아님. 주석 마크도 달라짐.*/
-            button{
-                background-color: rgb(255, 202, 202);
-            }
-            [type =button]
-            {
-                background-color: blueviolet;
-            }
-            /* *{background-color: darkgray;} */
-            #id_1{
-                background-color: antiquewhite;
-                border :3px solid brown;
-            }
-            .c_red{
-                color: red;
-            }
-            [class^=s] {
-                color: blue;
-            }
+            button {
+            background-color: blue;
+        }
+        button[type=button]{
+            background-color: aquamarine;
+        }
+        /* 
+        *{
+            background-color: azure;
+        } 
+        */
+        #id_1{
+            background-color: bisque;
+            border: 3px solid brown;
+        }
+        .c_red{
+            color: red;
+        }
 
-            div < form{
-                background-color: aqua;
-            }
-            [data-abc],[select],[:checked]{
-                color: blue;
-            }
+        [class~=m] {
+            color: blueviolet;
+        }
 
+        div > form{
+            background-color: yellowgreen;
+        }
+        [data-abc],[selected]{
+            color: blue;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="wrap">
-            <input type="checkbox" class="sr-only" id="check">
-            <label for="check">
-                <div class="button">
-                    <h3>HOME</h3>
-                    <div class="inside"></div>
-                </div>
-            </label>
+        <div data-abc="테스트용">data abc 테스트용</div>
+        <div><p style="color: blueviolet;background-color: yellowgreen;">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</p></div>
+        <div class="c-yellow">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</div>
+        <div class="s-m">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</div>
+        <div class="s-l">로렘 입숨로렘 입숨로렘 입숨로렘 입숨</div>
+        <button type="button">여긴 무슨색?</button>
+        <div><img src="./resources/images/1.png"></div>
+        <div id="id_1" class="c-red">
+            <form action="./20230619_search_do.html" method="get">
+                <meter value="5" max="10" ></meter>
+                <progress value="4" max="10" name="progress">프로그레스는 사용자입력은 아니나 date전달목적</progress>
+                <!-- ?optprice=1200 -->
+                <input type="text" list="datalist_id_3" name="optprice">
+                <datalist id="datalist_id_3">
+                    <option value="1000" label="XS추가요금"></option>
+                    <option value="1200">S</option>
+                    <option value="1500" >M</option>
+                </datalist>
+                <select name="size" >
+                    <optgroup label="US-Size">
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m" >M</option>
+                    </optgroup>
+                    <optgroup label="EU-Size">
+                        <option value="97">97</option>
+                        <option value="98">98</option>
+                        <option value="99" selected>99</option>
+                    </optgroup>
+                </select>
+                <input type="email" name="email" required>
+                <input type="url" name="url" value="http://"  required >
+                <input type="search" name="search">
+                <input type="number" value="5" name="num">
+                <input type="range" value="5" max="10" name="range">
+                <input type="color" name="mycolor"> <!-- mycolor=%23a69526 -->
+                <input type="date" name="mydate" class="c_red" min="2023-01-01" max="2023-07-20"> <!-- mydate=2023-06-21 -->
+                <input type="time" name="mytime" class="c_red"> <!-- 오전8시52분 mytime=08%3A52 -->
+                <fieldset>
+                    <legend>it관련</legend>
+                    <input checked="checked" type="checkbox" name="it" value="java" id="javaid"><label for="javaid">Java</label>
+                    <input checked="false" type="checkbox" name="it" value="c#" id="csharp"><label for="csharp">C#</label>
+                    <input checked="" type="checkbox" name="it" value="sql" id="sqlid"><label for="sqlid">SQL</label>
+                </fieldset>
+                <fieldset>
+                    <legend>수험서</legend>
+                    <input checked type="checkbox" name="sub" value="info"><label >정보처리기사</label>
+                    <input type="checkbox" name="sub" value="sqld"><label >SQLD</label>
+                    <input type="checkbox" name="sub" value="security"><label >정보보안기사</label>
+                </fieldset>
+                <input type="text" name="word" value="" readonly="readonly">
+                <button type="submit">텍스트와<img src="./resources/images/Pikachu SVG File.svg" width="20">이미지가능</button>
+                <input type="submit" value="텍스트만작성가능" >
+                <input type="button" value="type button은 js에서 사용될 예정">
+                <input type="reset" value="form태그내부사용자입력창들에초기값">
+            </form>
         </div>
-        <div ><p style="color: blueviolet; background-color: aqua;">f로렘입숨입숭로렘입숨입숭로렘입숨입숭</div>
-        <div class="s_aow">f로렘입숨입숭로렘입숨입숭dfdfd입숭</div>
-        <div class="s_yfw">f로렘입숨입숭df입숨입숭</div>
-        <div class="c_yellow">f로렘입숨입숭로렘입숨입숭로렘입숨입숭</div>
-        <button type="button">얍얍</button>
-        <div>
-            <img src="./resources/images/7.jpg" width="100" >
-        </div>
-        <input type="range" value="10" id="id_3">
-        <select size = "1" id="size"> 구분
-            <option value="xs"> XS</option>
-            <option value="S"> S</option>
-            <option value="M"> M</option>
-            <option value="L"> L</option>
-        </select>
-        <select size = "1" id="size"> 구분
-            <optgroup label="옷가게">
-            <option value="xs"> XS</option>
-            <option value="S"> S</option>
-            <option value="M"> M</option>
-            <option value="L"> L</option>
-        </optgroup>
-    </select>
-        <input type="text" id="GGG" list="datalist id 값">
-        <datalist id="gg">
-            <optgroup label="옷가게">
-            <option value="xs" label="xs"> XS</option>
-            <option value="S" label="s"> S</option>
-            <option value="M" label="m"> M</option>
-            <option value="L" label="l"> L</option>
-        </datalist>
-        <div id="id_1" class="c_red">
-        <div><form action="./20230619_search_do.html"method="get">
-            <input type="color" name="mycolor"> <!--mycolor=%23000000-->
-            <input type="date" name="mydate"> <!--mydate=2023-06-13-->
-            <input type="time" name="mytime"> <!--mytime=19%3A55-->
-            <fieldset>
-                <legend>it관련</legend>
-                <input type="radio" name="it" value="java"><label>Java</label>
-                <input type="radio" name="it" value="c#"><label>C#</label>
-                <input type="radio" name="it" value="sql"><label>SQL</label>
-            </fieldset>
-            <fieldset>
-                <legend>수험서</legend>
-                <input type="checkbox" name="sub" value="info"><label>정보처리기사</label>
-                <input type="checkbox" name="it" value="sqld"><label>SQLD</label>
-                <input type="checkbox" name="sub" value="security"><label>정보보안기사</label>
-            </fieldset>
-
-            <input type="text" name="word" value="검색하고 싶은게 뭐니?">
-            <button type="submit">텍스트와 <img src="./resources/images/4.png" width="50"> 
-            </button>
-            <input type="submit" value="innerText만 작성가능" >
-            <input type="button" value="type button은 js에서 사용될 예정" >
-            <input type="reset" value="form태그 내부사용자 입력창들에 초기값 입력" >
-        </form>
-        <intput type = "button" value ="button은 form과 무관하게 js연동">
-
-        </intput>
-        </div>
-        </div>
+        <hr>
     </header>
     <div id="wrap_content">
         <section>
-            <form action="../aa/aa.html" method="post">
+            <form action="a.html" method="post">
                 <input multiple type="file" name="uploadfile">
                 <button type="submit">파일 전달</button>
             </form>
             <hr>
-
         </section>
         <aside>
-            http://127.0.0.1:5500/20230517_html/20230619_login_check_do.html?hidd=hvalue&id=aaa&pwd=bbb
-            <form action="./20230619_login_check_do.html"method="post">
+            http://127.0.0.1:5500/20230619_login_check_do.html?hidd=hvalue&idd=aa&pwd=bb
+            http://127.0.0.1:5500/20230619_login_check_do.html?hidd=hvalue&idd=&pwd=
+            <form action="./20230619_login_check_do.html" method="post">
                 <input type="hidden" name="hidd" value="hvalue">
                 <table>
                     <tbody>
                         <tr>
-                            <th><label > ID </label></th>
-                            <td><input type="text" name = "id" size = "5" maxlength="10"></td>
-                            <td rowspan="2"> <button type="submit"> 로그인</button></td>...
+                            <th><label for="idid" >id</label></th>
+                            <td><input type="text" name="idd" maxlength="10" id="idid"></td>
+                            <td rowspan="2"><button type="submit">로그인</button></td>
                         </tr>
                         <tr>
-                            <th><label > Password </label></th>
+                            <th><label >password</label></th>
                             <td><input type="password" name="pwd"></td>
                         </tr>
-                
-               
                     </tbody>
-                <table>
-                <input type="reset" value="form태그 내부사용자 입력창들에 초기값">
+                </table>
+                <input type="reset" value="form태그내부사용자입력창들에초기값">
             </form>
         </aside>
+        <hr>
     </div>
     <footer>
-        copyright <Kh class="or kr"></Kh>
+        <input type="button" value="button은 form과 무관하게 js연동">
+         copyright KH.or.kr
     </footer>
 </body>
 </html>

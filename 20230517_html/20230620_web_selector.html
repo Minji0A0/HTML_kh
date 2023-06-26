@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>선택자</title>
     <link href="./resources/css/reset.css" rel="stylesheet">
     <style>
+        div {
+            line-height: 50px;
+            font: oblique small-caps 800 2em bolder 28pt 'Ostrich' 'Orbit', '함초롱바탕'
+                text-shadow: 5, 5, 10px #ddd;
+        }
+
         /*CSS문법
         p:first-of-type{color: green; background-color: yellow;}
         p:nth-of-type(2){color: blue; background-color: red;}
@@ -15,18 +22,71 @@
         .cb {font-size: 19px;}
         
         */
-        div .ca.cc {color: green; background-color: yellow;}
-        div .ca.cb.cc{color: blue; background-color: red;}
-        div .cb {color: red;background-color: gray;}
+        @font-face {
+            font-family: 'Ostrich';
+            /*font-style: bold;
+                font-weight: 400;
+                font-display: swap;*/
+            src: url(./resources/fonts/ostrich-sans-bold.sgv) format('sgv');
+            src: url(./resources/fonts/ostrich-sans-bold.ttf) format('truetype');
+            src: url(./resources/fonts/ostrich-sans-bold.woff) format('woff');
+            unicode-range: U+00-52F, U+1E00-1FFF, U+2200-22FF;
+        }
+
+        /*div .ca.cc {color: green; background-color: yellow;}
+            div .ca.cb.cc{color: blue; background-color: red;}
+            div .cb {color: red;background-color: gray;}*/
+        p.ca.cc {
+            font-weight: bold;
+            color: green;
+            border-width: 5px 10px 5px;
+            border-color: black red blue;
+            border-style: solid dashed solid;
+            display: inline-block;
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(250, 250, 00, .3);
+            font-size: large;
+            border-radius: 50px;
+        }
+
+        p.ca.cb.cc {
+            background-color: hsl(360, 70, 80);
+            color: yellow;
+        }
+
+        p.cb {
+            background-color: #ffffff;
+            color: rgb(143, 139, 11);
+        }
     </style>
 </head>
+
 <body>
     <div>
-        <p id="id1" class="c1 ca cc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+        <p id="id1" class="c1 ca cc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+            unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <a>여기 끼어넣기</a>
-        <p id="id2" class="c2 ca cb cc">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p id="id2" class="c2 ca cb cc font-face">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+            and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         <a>여기 끼어넣기</a>
-        <p id="id3" class="c3 cb">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p id="id3" class="c3 cb">What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five
+            centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+            recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
 </body>
+
 </html>
