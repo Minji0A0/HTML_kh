@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/20230517_html/resources/css/reset.css" rel="stylesheet">
+</head>
+<body>
+    <button type="button" onclick="console.log('안녕');console.log('안녕2');alert('경고')">버튼1</button>
+    <button type="button" id="btn-1">버튼 2</button>
+    <!-- html onclick 속성은 js onclick 속성과 차이가 있음. this 다름 -->
+    <button type="button">버튼 3</button>
+    <button type="button">버튼 4</button>
+    <button type="button">버튼 5</button>
+    <button type="button">버튼 6</button>
+<script>
+
+    // js onclick 속성 차이
+    var btnl = document.getElementById("bnt-1");
+    console.log(btn1);
+    console.log(typeof(btn1));
+    btn1.onclick=function(){
+        console.log('안녕');
+        console.log('안녕2');
+        alert('경고!!');
+    };
+</script>
+
+<script>
+
+document.getElementById("btn-1").onclick=function(){
+    console.log('안녕');
+    console.log('안녕2');
+    alert('경고!!');
+}
+
+
+//
+function btn1ClickHandlr(){
+    console.log('안녕');
+    console.log('안녕2');
+    alert('경고!!');
+}
+document.getElementById("btn-1").onclick = btn1ClickHandlr;
+// js 가 btn-1 버튼이 클릭되면 ()을 붙여서 호출해줌. btn1ClickHandler();
+
+
+document.getElementById("byn-2").onclick = btn2ClickHndler;
+// js 가 btn-1 버튼이 클릭되면 ()을 붙여서 호출해줌.
+// 아래처럼 작성하면 안됨!!
+document.getElementById("btn-1").onclick=btn1ClickHandlr();// undefined 결과값을 onclick에 대입
+
+document.getElementById("btn-3").addEventListener("click", btn2ClickHandler);
+document.getElementById("btn-4").addEventListener("click", function(){
+    console.log("btn-4 클릭");
+    console.log(this);
+}
+
+
+
+</script>
+
+</body>
+</html>
