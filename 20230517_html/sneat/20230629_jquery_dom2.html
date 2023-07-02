@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery dom event</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script>
+        $(loadedHandler); //페이지로딩되는 이벤트 등록
+        function loadedHandler(){
+            //페이지로딩되면 수행됨.
+            $("#show1").on("click", function(){
+                $("#content1").show(1000);
+                $("#content2").hide();
+            });
+            $("#show2").on("click", function(){
+                $("#content2").show(1000);
+                $("#content1").hide();
+            });
+            $("#showhide").on("click", function(){
+                $("#content1").toggle();
+                $("#content2").toggle();
+            });
+        }
+    </script>
+</head>
+<body>
+    <button id="show1" >보이기1</button>
+    <button id="show2" >보이기2</button>
+    <button id="showhide" >토글</button>
+    <div id="content1">
+        <input type="hidden" name="board_id" class="board_id" value="16324">
+        <span class="board_id" style="display: none;">16324</span>
+        <ul class="menu">
+            <li>1111 menu1</li>
+            <li>menu2</li>
+            <li id="select">menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>
+    </div>
+    <div id="content2">
+        <input type="hidden" name="board_id" class="board_id" value="16325">
+        <span class="board_id" style="display: none;">16325</span>
+        <ul class="menu">
+            <li>222 menu1</li>
+            <li>menu2</li>
+            <li id="select">menu3</li>
+            <li class="c_select"><img src="/20230517_html/resources/images/1.png"> 텍스트 노드<span>메뉴4</span></span> </li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>
+    </div>
+    <button id="btnAdd" >추가</button>
+
+    <script>
+        var html1 = document.getElementsByClassName("c_select")[0].innerHTML;
+        console.log(html1);
+        document.getElementsByClassName("c_select")[0].innerHTML = '<img src="/20230517_html/resources/images/1.png">' ;
+        var html2 = document.getElementsByClassName("c_select")[0].innerText;
+        console.log(html2);
+
+        var html3 = $(".c_select").html();
+        console.log(html3);
+        var html4 = $(".c_select").Text();
+        console.log(html4);
+        //여러요소에 이벤트 등록됨. jQuery
+        $(".select").on("click",function(){
+            console.log("select 눌림");
+            console.log(this);
+            console.log($(this));
+        });
+        // id #는 하나의 요소만 찾고 더이상 찾지 않음.
+        // id #은 하나에만 등록됨.
+        $(".select").on("click",function(){
+            console.log("select 눌림");
+            console.log(this);
+            console.log($(this));
+        });
+        //$("sselect").parents();
+
+        var arr1 = [10, 20, 30 ];
+        $.each(arr1.function (a,b){
+            console.log("each cb함수" + a+ ", " + b);
+            console.log(this)
+        });
+            
+
+        // $(".c select").addClass("C4");
+        $(".C_SELECT")addClass(function(idx){
+            console.log("addClass 의 function 호출");
+            console.log(idx);
+            console.log(this);
+            if(idx==0){return"c0"}else{return"c";}});
+
+            ${"c.select").togglrcal(idx, item({return "c_1-"}), ture);
+    </script>
+    
+</body>
+
+</html>
