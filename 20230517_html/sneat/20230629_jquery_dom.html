@@ -4,54 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width='device-width', initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script>
-        jQuery(document).ready(function(){
-            console.log("여기 loadevent - jQuery read");
-        });
-        $(document).ready(function(){
-            console.log("여기 loadevent - $ read")
-        })
-        jQuery(function(){
-            console.log("여기 loadevent - jQuery");
-        });
-        $(function(){
-            console.log("여기 loa
-            devent - $");
-        });
-
-        // onload / load : document가 모두 body가 모두 loading이 끝나면 발생하는 event
-        window.addEventListener("load", function(){
-            console.log("여기 loadevent - addEventListener");
-        });
-        window.onload = function(){
-            console.log("여기 loadevent");
-            var element1 = document.getElementById("content");
-            console.log(element1);
-            // event 등록 코드
-            $("#btnAdd").click(aHandler);
-            $("#btnAdd2").click(aHandler);
-            $("#btnAdd3").click(aHandler);
-            $("#btnAdd4").click(aHandler);
-            $("#btnAdd5").click(aHandler);
-        };
-
-        // event handler 정의 - 이 위치
-        function aHandler(){
-            console.log("a 호출");
-            var element1 = document.getElementById("content");
-            console.log(element1);
-        }
-        var element1 = document.getElementById("#content");
-        console.log(element1);
-        // aHandler();
-    </script>
 </head>
 <body>
-    <script>
-        var element1 = document.getElementById("#content");
-        console.log(element1);
-    </script>
     <div id="content">
         <ul class="menu">
             <li>menu1</li>
